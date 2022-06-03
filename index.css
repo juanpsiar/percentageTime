@@ -1,0 +1,34 @@
+:root {
+  --white: #ffffff;
+  --black: #000000;
+  --very-light-pink: #c7c7c7;
+  --text-input-field: #f7f7f7;
+  --hospital-green: #acd9b2;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.inputContainer {
+  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin: 10px;
+  height: auto;
+}
+
+.inputContainer h3 {
+  margin: 0px 10px;
+}
+
+.inputContainer input {
+  margin: 0px 10px;
+  height: 25px;
+}
+
+.resultLegend {
+  color: var(--hospital-green);
+}

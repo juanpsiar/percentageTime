@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap"
+      rel="stylesheet" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Calculadora de Porcentajes</h1>
+      <div class="inputContainer">
+        <h3 for="year" class="legendDate">Porcentaje</h3>
+        <input id="percentage" type="number" value="60" />
+      </div>
+      <div class="inputContainer">
+        <h3 for="year" class="legendDate">Años</h3>
+        <input id="year" type="number" id="year" pattern="[0-9]" value="1" />
+      </div>
+      <div class="inputContainer">
+        <h3 for="year" class="legendDate">Meses</h3>
+        <input id="month" type="number" value="12" pattern="[0-9]" />
+      </div>
+      <div class="inputContainer">
+        <h3 for="year" class="legendDate">Días</h3>
+        <input id="day" type="number" value="0" pattern="[0-9]" />
+      </div>
+      <div class="inputContainer">
+        <button onClick="calculatePercentage()" class="calcButton">Calculate %</button>
+      </div>
+      <br />
+      <div class="inputContainer">
+        <h2 for="year" class="resultLegend">Resultado</h2>
+        <label id="result" type="number"></label>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
