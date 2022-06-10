@@ -3,9 +3,29 @@ const monthField = document.querySelector('#month')
 const dayField = document.querySelector('#day')
 const percentage = document.querySelector('#percentage')
 const result = document.querySelector('#result')
+const dateStart = document.querySelector('#dateStart')
+const endDate = document.querySelector('#endDate')
+const legendEndDate = document.querySelector('#legendEndDate')
+
+let date = new Date()
+let day = date.getDate()
+let month = date.getMonth() + 1
+let year = date.getFullYear()
+
+if (month < 10) month = '0' + month
+if (day < 10) day = '0' + day
+
+let today = year + '-' + month + '-' + day
+document.getElementById('dateStart').value = today
 
 function roundToTwo(num) {
   return +(Math.round(num + 'e+2') + 'e-2')
+}
+
+calculateEndDate = (daysPercentage) => {
+  let startDate = moment(dateStart.value)
+  let datePredicted = startDate.add(daysPercentage, 'day')
+  endDate.innerText = datePredicted.format('DD-MM-YYYY')
 }
 
 calculatePercentage = () => {
@@ -17,6 +37,8 @@ calculatePercentage = () => {
   const resultShow = `${yearNumber} Años ${monthNumber - yearNumber * 12} Meses ${
     totalDays - monthNumber * 30
   } Días `
-  console.log(totalTime, { totalDays }, monthNumber, yearNumber, resultShow)
   result.innerText = resultShow
+
+  calculateEndDate(totalDays)
+  legendEndDate.innerText = `Cumple el ${percentage.value}% el `
 }

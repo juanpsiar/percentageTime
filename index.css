@@ -27,8 +27,14 @@
 .inputContainer input {
   margin: 0px 10px;
   height: 25px;
+  width: 150px;
 }
 
 .resultLegend {
   color: var(--hospital-green);
+}
+
+.enDateLegend {
+  color: var(--hospital-green);
+  margin-right: 20px;
 }
